@@ -17,7 +17,7 @@ double pear_get_chi_square(struct pear_data *pear_data) {
      * D E F
      * G H I
      */
-    int A = 0, B = 0, C = 0, D = 0, E = 0, F = 0, G = 0, H = 0, I = 0;
+    long int A = 0, B = 0, C = 0, D = 0, E = 0, F = 0, G = 0, H = 0, I = 0;
     char *a = (*pear_data).a;
     char *b = (*pear_data).b;
     I = (*pear_data).len;
@@ -39,7 +39,7 @@ double pear_get_chi_square(struct pear_data *pear_data) {
     F = D + E;
     G = A + D;
     H = B + E;
-    double squre = (double)(A * E - B * D);
+    long double squre = (long double)(A * E - B * D);
     return squre / C / F * squre / G / H * I;
 }
 
