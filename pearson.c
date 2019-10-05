@@ -11,6 +11,15 @@ struct pear_data* pear_create_from_chars(int len, const char *a, const char *b) 
     return pear_data;
 }
 
+struct pear_data* pear_create_from_chars_reffer(int len, char *a, char *b) {
+    struct pear_data *pear_data = (struct pear_data *)malloc(sizeof (struct pear_data));
+    (*pear_data).len = len;
+    (*pear_data).a = a;
+    (*pear_data).b = b;
+    (*pear_data).type = 1;
+    return pear_data;
+}
+
 double pear_get_chi_square(struct pear_data *pear_data) {
     /*
      * A B C

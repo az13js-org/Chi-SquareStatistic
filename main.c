@@ -23,7 +23,7 @@ double test(int len) {
         }
     }
 
-    pear_data = pear_create_from_chars(len, a, b);
+    pear_data = pear_create_from_chars_reffer(len, a, b);
     seq = pear_get_chi_square(pear_data);
     //printf("%lf\n", seq);
 
