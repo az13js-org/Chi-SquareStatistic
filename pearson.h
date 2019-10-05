@@ -13,6 +13,7 @@ struct pear_data {
 };
 
 struct pear_data* pear_create_from_chars(int len, const char *a, const char *b);
+struct pear_data* pear_create_from_chars_reffer(int len, char *a, char *b);
 double pear_get_chi_square(struct pear_data *pear_data);
 void pear_free(struct pear_data *pear_data);
 double pear_believe(double chi_square);
