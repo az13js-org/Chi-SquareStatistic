@@ -29,6 +29,7 @@
 5. `double seq = pear_get_chi_square(pear_data);`计算得到结果。
 6. 用`pear_believe(seq)`映射得到置信度，用`pear_free(pear_data)`清空结构体。
 
+```C
     struct pear_data *pear_data;
     char *a, *b;
     a = (char*)calloc(len, sizeof (char));
@@ -42,3 +43,4 @@
     pear_free(pear_data);
     free(a);
     free(b);
+```
