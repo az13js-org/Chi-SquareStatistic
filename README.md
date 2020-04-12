@@ -24,7 +24,7 @@
 
 1. 包含头文件`#include "pearson.h"`。
 2. 声明计算使用的专门的结构体：`struct pear_data *pear_data;`。
-3. 生命两个变量，`char *a`和`char *b`为一维的数组，长度一致填充0和非0的数据进去。这里的`0x00`和非`0x00`的数值会被统计为事件发生与否的两个状态。
+3. 声明两个变量，`char *a`和`char *b`为一维的数组，长度一致填充0和非0的数据进去。这里的`0x00`和非`0x00`的数值会被统计为事件发生与否的两个状态。
 4. `pear_data = pear_create_from_chars_reffer(len, a, b);`从定义的数组`a`和`b`创建带数据结构体`pear_data`。
 5. `double seq = pear_get_chi_square(pear_data);`计算得到结果。
 6. 用`pear_believe(seq)`映射得到置信度，用`pear_free(pear_data)`清空结构体。
